@@ -1,12 +1,12 @@
 <h3>Enter the specs for your parcel:</h3>
-<form action="/parcels" method="post">
+<form action="/parcels/view" method="post">
   <label for="height">Height (in inches):</label>
-  <input id="height" name="height" type="number">
+  <input id="height" name="height" type="number" min="1" max="1000" required>
   <label for="width">Width (in inches):</label>
-  <input id="width" name="width" type="number">
+  <input id="width" name="width" type="number" min="1" max="1000" required>
   <label for="length">Length (in inches):</label>
-  <input id="length" name="length" type="number">
+  <input id="length" name="length" type="number" min="1" max="1000" required>
   <label for="weight">Weight (in ounches):</label>
-  <input id="weight" name="weight" type="number">
+  <input id="weight" name="weight" type="number" min="1" max="1000" required>
   <button type="submit">Submit</button>
 </form>

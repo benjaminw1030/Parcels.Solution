@@ -7,16 +7,24 @@ namespace Parcels.Controllers
   public class ParcelsController : Controller
   {
 
-    [HttpGet("/parcels")]
-    public ActionResult Index()
+    [HttpGet("/parcels/view")]
+    public ActionResult ViewParcel()
     {
-      return View();
+      Parcel myParcel = Parcel.GetParcel();
+      return View(myParcel);
     }
 
     [HttpGet("/parcels/new")]
     public ActionResult CreateForm()
     {
       return View();
+    }
+
+    [HttpPost("/parcels/view")]
+    public ActionResult CreateParcel(int height, int width, int length, int weight)
+    {
+      Parcel myParcel = new Parcel(height, width, length, weight);
+      return RedirectToAction("ViewParcel");
     }
 
     // [HttpGet("/cars/budget")]
