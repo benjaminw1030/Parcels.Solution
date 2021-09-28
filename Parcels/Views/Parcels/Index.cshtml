@@ -1,0 +1,20 @@
+@using Parcels.Models;
+
+<h1>Here are the specifications of your parcel:</h1>
+
+<ul>
+  <li>@Model.Height in</li>
+  <li>@Model.Width in</li>
+  <li>@Model.Length in</li>
+  <li>@Model.Weight oz</li>
+</ul>
+
+<form action="/">
+  <button type="submit">Return to Home</button>
+</form>
+<form action="/cars/budget">
+  <button type="submit">Filter cars by your budget</button>
+</form>
+<form action="/cars/new">
+  <button type="submit">Add another Car</button>
+</form>
